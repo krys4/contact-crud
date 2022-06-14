@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Contact;
 
 use Illuminate\Http\Request;
 
@@ -46,7 +47,7 @@ class ContactController extends Controller
         ]);
         $show = Contact::create($validatedData);
 
-        return redirect('/contacts.index')->with('success', 'Contact is successfully saved');
+        return redirect('/contacts')->with('success', 'Contact is successfully saved');
     }
 
     /**
